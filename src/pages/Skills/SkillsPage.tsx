@@ -1,3 +1,4 @@
+import BackButton from "../../components/BackButton/BackButton";
 import Section from "../../components/Section";
 import './SkillsPage.css'
 export default  function SkillsPage(){
@@ -9,6 +10,7 @@ export default  function SkillsPage(){
             <Section title1="Personnelles" title2="Mes compétences personnelles" text="Les compétences que j'ai acquérit par moi même" links={[
                 {route:'./?page=skills&section=perso', text:"Juste là >>"}
             ]}></Section>
+            <BackButton href="./?page=about"></BackButton>
         </main>
     )
 }

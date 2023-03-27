@@ -21,14 +21,16 @@ export function HomePage(){
         <main id="homeRoot">
             <Section id="git" title1='Découvrez mes projets' links ={[
                 {route:'https://forge.univ-lyon1.fr/p2102858',text:'GitLab',icon:faGitlab,iconSize:'2x' as SizeProp},
-                {route:'https://github.com/Gerard2par2',text:'GitHub',icon:faGithub,iconSize:'2x' as SizeProp},]}
+                {route:'https://github.com/Gerard2par2',text:'GitHub',icon:faGithub,iconSize:'2x' as SizeProp},
+                {route:'./?page=projects',text:"Quelques projets >>", class:"centeredLink"}
+            ]}
             ></Section>
 
             <Section id='about' title1 ='Simon Menard' title2 = 'Etudiant en informatique' links={[
-                {route:'./?page=about',text:"Plus d'informations >>"}]}
+                {route:'./?page=about',text:"Plus d'informations >>", class:"centeredLink"}]}
             ></Section>
 
-            <Section id='contact' title1="Contacts" links={[
+            <Section id='contact' title1="Contact" links={[
                 {id:'mail',route:'./',text:'simon.menardp03@gmail.com',icon:faEnvelope ,onClickEvent:contactMailClick as any},
                 {id:'discord', route:'./',text:'[Insert discord user code]', icon:faDiscord}
             ]}childrenNodes={[<CopyPopup ref={popupRef}></CopyPopup>]}

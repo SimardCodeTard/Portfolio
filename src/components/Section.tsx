@@ -36,9 +36,9 @@ export default function Section({id,links,text,title1,title2,childrenNodes,isGro
               {  text ? <p>{text}</p> : null }
               { links ? 
               links.map((link:Link,key:number)=>{
-                return <a  key={key} href={link.route} onClick = {link?.onClickEvent}>
+                return <a className={link.class}  id={link.id} key={key} href={link.route} onClick = {link?.onClickEvent}>
                   {link.icon ? 
-                    <FontAwesomeIcon className={link.class ? link.class : 'linkIcon'} icon={link.icon} size={link.iconSize ? link.iconSize : undefined} />
+                    <FontAwesomeIcon  icon={link.icon} size={link.iconSize ? link.iconSize : undefined} />
                   :null}
                   {link.text}
                 </a>

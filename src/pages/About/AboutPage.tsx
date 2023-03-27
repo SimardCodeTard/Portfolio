@@ -1,3 +1,4 @@
+import BackButton from "../../components/BackButton/BackButton";
 import Section from "../../components/Section";
 import '../Home/HomePage.css'
 export default function AboutPage(){
@@ -18,6 +19,7 @@ export default function AboutPage(){
                 {route:'../?page=goals',text:'Par ici >>'}
             ]}
             ></Section>
+            <BackButton href='./'></BackButton>
         </main>
     )
 }

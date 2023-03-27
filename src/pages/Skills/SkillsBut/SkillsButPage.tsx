@@ -2,6 +2,7 @@ import './SkillsButPage.css'
 import { useState } from "react";
 import Semester from "./Semester/Semester";
 import Competence from './Competence/Competence';
+import BackButton from '../../../components/BackButton/BackButton';
 
 export default function SkillsButPage(){
     const queryParameters = new URLSearchParams(window.location.search)
@@ -18,6 +19,7 @@ export default function SkillsButPage(){
             </>
             :<Competence semester={s} comp={compentence}></Competence>
         }
+        <BackButton href='./?page=skills'></BackButton>
         </main>
     )
 }

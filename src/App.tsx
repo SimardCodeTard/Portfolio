@@ -3,6 +3,7 @@ import AboutPage from './pages/About/AboutPage';
 import GoalsPage from './pages/Goals/GoalsPage';
 import { HomePage } from './pages/Home/HomePage';
 import PassionsPage from './pages/Passions/PassionsPage';
+import ProjectsPage from './pages/Projects/PojectsPage';
 import SkillsButPage from './pages/Skills/SkillsBut/SkillsButPage';
 import SkillsPage from './pages/Skills/SkillsPage';
 import SkillsPersoPage from './pages/Skills/SkillsPerso/SkillsPersoPage';
@@ -22,6 +23,8 @@ function App() {
     return (<PassionsPage></PassionsPage>)
   }else if (page === 'goals'){
     return (<GoalsPage></GoalsPage>)
+  }else if(page ==="projects"){
+    return (<ProjectsPage></ProjectsPage>)
   }
   return (<HomePage></HomePage>);
 }
