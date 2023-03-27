@@ -1,0 +1,15 @@
+#butSkillsPage{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#butSkillsPage > h1{
+    width: fit-content;
+    height: fit-content;
+    margin: 1em;
+    background-color: transparent;
+}

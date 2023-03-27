@@ -1,0 +1,10 @@
+#skillsRoot{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;    
+    height: 100vh;
+    width: 100vw;
+}
+
+.section, .growingSection{
+    max-width: 40em;
+}
