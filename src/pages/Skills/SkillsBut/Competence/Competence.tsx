@@ -1,8 +1,8 @@
-import './Competence.css'
+import styles from './Competence.module.css';
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import Section from "../../../../components/Section";
+import Section from "../../../../components/Section/Section";
 import BackButton from '../../../../components/BackButton/BackButton';
 
 export default function Competence(props:{comp:string,semester:string}){
@@ -21,9 +21,9 @@ export default function Competence(props:{comp:string,semester:string}){
     </>
     )
     return(
-        <>
-            <div className='picker'>
-                <div className='rowContainer'>
+        <main id={styles.competenceRoot}>
+            <div className={styles.picker}>
+                <div className={styles.rowContainer}>
                     <h1> 
                         <p>Semestre</p>
                         {semesterIndex > 0 ? <FontAwesomeIcon icon={faArrowLeft} onClick={()=>{
@@ -39,7 +39,7 @@ export default function Competence(props:{comp:string,semester:string}){
                         }}></FontAwesomeIcon> : null}        
                     </h1>
                 </div>
-                <div className='rowContainer'>
+                <div className={styles.rowContainer}>
                     <h1> 
                         <p>Compétence</p>
                         {competenceIndex > 0 ? <FontAwesomeIcon icon={faArrowLeft} onClick={()=>{
@@ -58,6 +58,5 @@ export default function Competence(props:{comp:string,semester:string}){
             </div>
             <Section title1={dataRow.title1} title2={dataRow.title2} text={dataRow.text} isGrowing={false} childrenNodes={[children]}></Section>
             <BackButton href='./?page=skills&section=but'></BackButton>
-        </>
-        )
+        </main>)
 }

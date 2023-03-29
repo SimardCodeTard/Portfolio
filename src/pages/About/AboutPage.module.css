@@ -1,0 +1,7 @@
+#aboutRoot{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:100vw;
+    height: 100vh;
+}

@@ -1,0 +1,55 @@
+#semesterRoot{
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    place-items: center;
+    height: fit-content;
+    padding: 0;
+    width: 100vw;
+    /* overflow-x: hidden; */
+}
+#semesterRow>h1{
+    margin-top: 1em;
+    grid-row: 1;
+}
+#semesterSection{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100vw!important;
+    place-items: center;
+    height: fit-content!important;
+    margin: 0;
+    padding: 1em;
+}
+#semesterSection > .section, #semesterSection > .growingSection{
+    width: 60%;
+    padding: 1em!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60%;
+}
+#semesterSection > .section > *, #semesterSection > .growingSection > *{
+    width: fit-content!important;
+}
+
+#semesterSection > .section > h1, #semesterSection > .growingSection > h1{
+    font-size: 1.8em;
+}
+#semesterSection > .section > .content > h2, #semesterSection > .growingSection > .content > h2{
+    font-size: 1em;
+}
+#butSkillsPage > h1{
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.8);
+    transition: all 1s ease;
+    border-radius: 5px;
+    padding:0.8em;
+}
+#butSkillsPage > h1:hover{
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.1);
+    border: solid 1px rgba(255,255,255,0.2);
+}

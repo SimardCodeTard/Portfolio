@@ -1,36 +1,181 @@
 {
     "competences":[
         [
-            {"title1":"Réaliser un développement d'applications","title2":"Développement de solutions informatiques variées","text":"Développer des applications informatiques simples.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=1&s=1", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Mes premiers développements","text":"C'est dans cette compétence que j'ai réalisé mon premier développement, une application console programmée en C."}},
-            {"title1":"Optimiser des applications","title2":"Optimiser des solutions informatiques en fonction de critères spécifiques","text":"Appréhender et construire des algorithmes.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=2&s=1", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Mes commencements en algorithmie","text":"Cette compétence m'a permis d'appréhender les bases de l'algorithmie."}},
-            {"title1":"Administrer des systèmes informatiques communicants","title2":"Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des réseaux et optimiser le système informatique d'une organisation.","text":"Installer et configurer un poste de travail.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=3&s=1", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Découverte des OS","text":"Cette compétence m'a fait découvrir le fonctionnement d'un système d'exploitation. J'ai également appris les bases des commandes shell UNIX, qui me sont extrêmement utiles aujourd'hui."}},
-            {"title1":"Gérer des données de l'information","title2":"Concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.","text":"Concevoir et mettre en place une base de données à partir d'un cahier des charges.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=4&s=1", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Découverte du SQL","text":"Très complexe pour moi au début, cette compétence m'a offert un grand nombre d'informations sur le fonctionnement des bases de données SQL et comment formuler des requêtes dans ce langage."}},
-            {"title1":"Conduire un projet","title2":"Satisfaire les besoins des utilisateurs au regard de la chaîne de valeur du client. Organiser et piloter un projet informatique avec des méthodes classiques ou agiles.","text":"Identifier les besoins métiers des clients et des utilisateurs.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=5&s=1", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Découverte de la gestion de projets et d'entreprises","text":"Base d'économie, de comptabilité et de gestion de projets. Cette compétence m'a offert un grand nombre de connaissances sur ces domaines qui m'étaient alors inconnus."}},
-            {"title1":"Collaborer au sein d'une équipe informatique","title2":"Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.","text":"Identifier les besoins métiers des clients et des utilisateurs.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=6&s=1", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Apprentissage de bonnes pratiques pour le travail en groupe","text":"Versionning, qualité de développement, cette compétence m'a formé à collaborer sur un projet informatique."}}
+            {
+                "title1":"Réaliser un développement d'applications",
+                "title2":"Développement de solutions informatiques variées",
+                "text":"Développer des applications informatiques simples.",
+                "links":[
+                    {
+                        "route":"./?page=skills&section=but&subsection=competence&competence=1&s=1", 
+                        "text":"Plus de détails sur cette compétence >>"
+                    }
+                ],
+                "children":{
+                        "title":"Mes premiers développements",
+                        "text":"C'est dans cette compétence que j'ai réalisé mon premier développement, une application console programmée en C."
+                    }},
+            {
+                "title1":"Optimiser des applications",
+                "title2":"Optimiser des solutions informatiques en fonction de critères spécifiques",
+                "text":"Appréhender et construire des algorithmes.",
+                "links":[
+                    {
+                        "route":"./?page=skills&section=but&subsection=competence&competence=2&s=1", 
+                        "text":"Plus de détails sur cette compétence >>"
+                    }
+                ],
+                "children":{
+                        "title":"Mes commencements en algorithmie",
+                        "text":"Cette compétence m'a permis d'appréhender les bases de l'algorithmie."
+                    }},
+            {
+                "title1":"Administrer des systèmes informatiques communicants",
+                "title2":"Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des réseaux et optimiser le système informatique d'une organisation.",
+                "text":"Installer et configurer un poste de travail.",
+                "links":[
+                    {
+                        "route":"./?page=skills&section=but&subsection=competence&competence=3&s=1", 
+                        "text":"Plus de détails sur cette compétence >>"
+                    }
+                ],
+                "children":{
+                        "title":"Découverte des OS",
+                        "text":"Cette compétence m'a fait découvrir le fonctionnement d'un système d'exploitation. J'ai également appris les bases des commandes shell UNIX, qui me sont extrêmement utiles aujourd'hui."
+                    }},
+            {
+                "title1":"Gérer des données de l'information",
+                "title2":"Concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.",
+                "text":"Concevoir et mettre en place une base de données à partir d'un cahier des charges.",
+                "links":[
+                    {
+                        "route":"./?page=skills&section=but&subsection=competence&competence=4&s=1", 
+                        "text":"Plus de détails sur cette compétence >>"
+                    }
+                ],
+                "children":{
+                    "title":"Découverte du SQL",
+                    "text":"Très complexe pour moi au début, cette compétence m'a offert un grand nombre d'informations sur le fonctionnement des bases de données SQL et comment formuler des requêtes dans ce langage."
+                }},
+            {
+                "title1":"Conduire un projet",
+                "title2":"Satisfaire les besoins des utilisateurs au regard de la chaîne de valeur du client. Organiser et piloter un projet informatique avec des méthodes classiques ou agiles.",
+                "text":"Identifier les besoins métiers des clients et des utilisateurs.",
+                "links":[
+                    {
+                        "route":"./?page=skills&section=but&subsection=competence&competence=5&s=1", 
+                        "text":"Plus de détails sur cette compétence >>"
+                    }
+                ],
+                "children":{
+                    "title":"Découverte de la gestion de projets et d'entreprises",
+                    "text":"Base d'économie, de comptabilité et de gestion de projets. Cette compétence m'a offert un grand nombre de connaissances sur ces domaines qui m'étaient alors inconnus."
+                }},
+            {
+                "title1":"Collaborer au sein d'une équipe informatique",
+                "title2":"Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.",
+                "text":"Identifier les besoins métiers des clients et des utilisateurs.",
+                "links":[
+                    {
+                        "route":"./?page=skills&section=but&subsection=competence&competence=6&s=1", 
+                        "text":"Plus de détails sur cette compétence >>"
+                    }],
+                "children":{
+                    "title":"Apprentissage de bonnes pratiques pour le travail en groupe",
+                    "text":"Versionning, qualité de développement, cette compétence m'a formé à collaborer sur un projet informatique."
+                }}
         ],
         [
-            {"title1":"Réaliser un développement d'applications","title2":"Développement de solutions informatiques variées","text":"Développer des applications informatiques simples.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=1&s=2", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Découverte des langages de programmation orientés objet","text":"Découverte de l'orienté objet et premiers développements en Java."}},
-            {"title1":"Optimiser des applications","title2":"Optimiser des solutions informatiques en fonction de critères spécifiques","text":"Appréhender et construire des algorithmes.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=2&s=2", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Elargissement de mes compétences en algorithmie","text":"Découverte de nouvelles structures de données (listes et graphes) et d'algorithmes de parcours et de traitement de graphes."}},
-            {"title1":"Administrer des systèmes informatiques communicants","title2":"Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des réseaux et optimiser le système informatique d'une organisation.","text":"Déployer des services dans une architecture réseau","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=3&s=2", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Mes premiers pas dans l'utilisation de serveurs","text":"Cette compétence m'a permis de comprendre comment fonctionne un serveur web, les étapes à suivre pour son installation et sa configuration et les façons de déployer une application web."}},
-            {"title1":"Gérer des données de l'information","title2":"Concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.","text":"Concevoir et mettre en place une base de données à partir d'un cahier des charges.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=4&s=2", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Approfondissement de mes compétences en base de données","text":"J'ai découvert et pratiqué le PL/SQL et étudié plus en profondeur le fonctionnement d'une base de données SQL."}},
-            {"title1":"Conduire un projet","title2":"Satisfaire les besoins des utilisateurs au regard de la chaîne de valeur du client. Organiser et piloter un projet informatique avec des méthodes classiques ou agiles.","text":"Identifier les besoins métiers des clients et des utilisateurs","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=5&s=2", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Application de mes compétences de gestion de projet","text":"Mise en pratique des méthodes agiles (SCRUM) lors d'un projet collaboratif."}},
-            {"title1":"Collaborer au sein d'une équipe informatique","title2":"Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.","text":"Situer son rôle et ses missions au sein d'une équipe informatique.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=6&s=2", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Mise en pratique de mes compétences de travail collaboratif","text":"Allant de paire avec la C5, la gestion de projet, j'ai mis en pratique mes compétences de collaboration sur un projet de développement tout au long du semestre."}}
+            {
+                "title1":"Réaliser un développement d'applications",
+                "title2":"Développement de solutions informatiques variées",
+                "text":"Développer des applications informatiques simples.",
+                "links":[
+                    {
+                        "route":"./?page=skills&section=but&subsection=competence&competence=1&s=2",
+                         "text":"Plus de détails sur cette compétence >>"
+                    }],
+                "children":{
+                    "title":"Découverte des langages de programmation orientés objet",
+                    "text":"Découverte de l'orienté objet et premiers développements en Java."
+                }},
+            {
+                "title1":"Optimiser des applications",
+                "title2":"Optimiser des solutions informatiques en fonction de critères spécifiques",
+                "text":"Appréhender et construire des algorithmes.",
+                "links":[
+                    {
+                        "route":"./?page=skills&section=but&subsection=competence&competence=2&s=2", 
+                        "text":"Plus de détails sur cette compétence >>"
+                    }],
+                "children":{
+                    "title":"Elargissement de mes compétences en algorithmie",
+                    "text":"Découverte de nouvelles structures de données (listes et graphes) et d'algorithmes de parcours et de traitement de graphes."
+                }},
+            {
+                "title1":"Administrer des systèmes informatiques communicants",
+                "title2":"Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des réseaux et optimiser le système informatique d'une organisation.",
+                "text":"Déployer des services dans une architecture réseau",
+                "links":[
+                    {
+                        "route":"./?page=skills&section=but&subsection=competence&competence=3&s=2", 
+                        "text":"Plus de détails sur cette compétence >>"
+                    }],
+                "children":{
+                    "title":"Mes premiers pas dans l'utilisation de serveurs",
+                    "text":"Cette compétence m'a permis de comprendre comment fonctionne un serveur web, les étapes à suivre pour son installation et sa configuration et les façons de déployer une application web."
+                        }},
+            {
+                "title1":"Gérer des données de l'information",
+                "title2":"Concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.","text":"Concevoir et mettre en place une base de données à partir d'un cahier des charges.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=4&s=2", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Approfondissement de mes compétences en base de données","text":"J'ai découvert et pratiqué le PL/SQL et étudié plus en profondeur le fonctionnement d'une base de données SQL."}},
+            {
+                "title1":"Conduire un projet","title2":"Satisfaire les besoins des utilisateurs au regard de la chaîne de valeur du client. Organiser et piloter un projet informatique avec des méthodes classiques ou agiles.","text":"Identifier les besoins métiers des clients et des utilisateurs","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=5&s=2", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Application de mes compétences de gestion de projet","text":"Mise en pratique des méthodes agiles (SCRUM) lors d'un projet collaboratif."}},
+            {
+                "title1":"Collaborer au sein d'une équipe informatique","title2":"Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.","text":"Situer son rôle et ses missions au sein d'une équipe informatique.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=6&s=2", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Mise en pratique de mes compétences de travail collaboratif","text":"Allant de paire avec la C5, la gestion de projet, j'ai mis en pratique mes compétences de collaboration sur un projet de développement tout au long du semestre."}}
         ],
         [
-            {"title1":"Réaliser un développement d'applications","title2":"Développement de solutions informatique variées","text":"Partir des éxigeances et aller jusqu'à une application complète","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=1&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Programmation en JS et en PHP","text":"Découverte des langages JS et PHP, développement de deux applications."}},
-            {"title1":"Optimiser des applications","title2":"Optimiser des solutions informatiques en fonction de critères spécifiques","text":"Sélectionner des algorithmes adéquats pour répondre à un problème donné.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=2&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Algorithmie et structures de données avancées","text":"Découverte des arbres et de leurs alogrithme de recherche, suppression, création ..."}},
-            {"title1":"Administrer des systèmes informatiques communicants","title2":"Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des réseaux et opimiser le système informatique d'une organisation.","text":"Déployer des services dans une architecture réseau","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=3&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Découverte des principaux protocole réseaux","text":"IP, TCP ou encore NAT, cette compétence m'a permis de comprendre en détails les protocoles réseaux utilisés aujourd'hui sur le net."}},
-            {"title1":"Gérer des données de l'information","title2":"Concevoir, gérer, adminstrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.","text":"Optimiser une base de données, intéragir avec une application et mettre en oeuvre la sécuité.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=4&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Lien d'une base de données avec une application","text":"Cette compétence m'a appris comment utiliser une base de données avec une application en utilisant plusieurs technologies différentes : Java, php et aussi JS."}},
-            {"title1":"Conduire un projet","title2":"Satisfaire les besohs des utilisateurs au regard de la chaine de valeur du client. organiser et piloter un projet informatique avec des méthodes classiques ou agiles.","text":"Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et dse utilisateurs.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=5&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Première rédaction d'un cahier des charges","text":"J'ai appris à créer un cahier dse charges détaillé, en suivant les législations en rigueur et avec des méthodes de gestion de projet agiles"}},
-            {"title1":"Collaborer au sein d'une équipe informatique","title2":"Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.","text":"Situer son rôle et ses missions au sein d'uneéquipe informatique.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=6&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Mise en pratique des notions de gestion de projet","text":"Lors du semestre 3, j'ai pu mettre en pratique les compétences acquéries au long de ma formation dans le contexte d'un développement collaboratif de deux applications."}}
+            {
+                "title1":"Réaliser un développement d'applications",
+            "title2":"Développement de solutions informatique variées",
+            "text":"Partir des éxigeances et aller jusqu'à une application complète","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=1&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Programmation en JS et en PHP","text":"Découverte des langages JS et PHP, développement de deux applications."}},
+            {
+                "title1":"Optimiser des applications",
+            "title2":"Optimiser des solutions informatiques en fonction de critères spécifiques",
+            "text":"Sélectionner des algorithmes adéquats pour répondre à un problème donné.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=2&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Algorithmie et structures de données avancées","text":"Découverte des arbres et de leurs alogrithme de recherche, suppression, création ..."}},
+            {
+                "title1":"Administrer des systèmes informatiques communicants",
+            "title2":"Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des réseaux et opimiser le système informatique d'une organisation.","text":"Déployer des services dans une architecture réseau","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=3&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Découverte des principaux protocole réseaux","text":"IP, TCP ou encore NAT, cette compétence m'a permis de comprendre en détails les protocoles réseaux utilisés aujourd'hui sur le net."}},
+            {
+                "title1":"Gérer des données de l'information",
+            "title2":"Concevoir, gérer, adminstrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.","text":"Optimiser une base de données, intéragir avec une application et mettre en oeuvre la sécuité.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=4&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Lien d'une base de données avec une application","text":"Cette compétence m'a appris comment utiliser une base de données avec une application en utilisant plusieurs technologies différentes : Java, php et aussi JS."}},
+            {
+                "title1":"Conduire un projet",
+            "title2":"Satisfaire les besohs des utilisateurs au regard de la chaine de valeur du client. organiser et piloter un projet informatique avec des méthodes classiques ou agiles.","text":"Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et dse utilisateurs.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=5&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Première rédaction d'un cahier des charges","text":"J'ai appris à créer un cahier dse charges détaillé, en suivant les législations en rigueur et avec des méthodes de gestion de projet agiles"}},
+            {
+                "title1":"Collaborer au sein d'une équipe informatique",
+            "title2":"Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.","text":"Situer son rôle et ses missions au sein d'uneéquipe informatique.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=6&s=3", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"Mise en pratique des notions de gestion de projet","text":"Lors du semestre 3, j'ai pu mettre en pratique les compétences acquéries au long de ma formation dans le contexte d'un développement collaboratif de deux applications."}}
         ],
         [
-            {"title1":"Réaliser un développement d'applications","title2":"Développement de solutions informatique variées","text":"Partir des éxigeances et aller jusqu'à une application complète","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=1&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
-            {"title1":"Optimiser des applications","title2":"Optimiser des solutions informatiques en fonction de critères spécifiques","text":"Sélectionner des algorithmes adéquats pour répondre à un problème donné.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=2&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
-            {"title1":"Administrer des systèmes informatiques communicants","title2":"Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des réseaux et opimiser le système informatique d'une organisation.","text":"Déployer des services dans une architecture réseau","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=3&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
-            {"title1":"Gérer des données de l'information","title2":"Concevoir, gérer, adminstrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.","text":"Optimiser une base de données, intéragir avec une application et mettre en oeuvre la sécuité.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=4&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
-            {"title1":"Conduire un projet","title2":"Satisfaire les besohs des utilisateurs au regard de la chaine de valeur du client. organiser et piloter un projet informatique avec des méthodes classiques ou agiles.","text":"Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et dse utilisateurs.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=5&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
-            {"title1":"Collaborer au sein d'une équipe informatique","title2":"Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.","text":"Situer son rôle et ses missions au sein d'uneéquipe informatique.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=6&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}}
+            {
+                "title1":"Réaliser un développement d'applications",
+            "title2":"Développement de solutions informatique variées",
+            "text":"Partir des éxigeances et aller jusqu'à une application complète","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=1&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
+            {
+                "title1":"Optimiser des applications",
+            "title2":"Optimiser des solutions informatiques en fonction de critères spécifiques",
+            "text":"Sélectionner des algorithmes adéquats pour répondre à un problème donné.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=2&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
+            {
+                "title1":"Administrer des systèmes informatiques communicants",
+            "title2":"Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des réseaux et opimiser le système informatique d'une organisation.","text":"Déployer des services dans une architecture réseau","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=3&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
+            {
+                "title1":"Gérer des données de l'information",
+            "title2":"Concevoir, gérer, adminstrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.","text":"Optimiser une base de données, intéragir avec une application et mettre en oeuvre la sécuité.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=4&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
+            {
+                "title1":"Conduire un projet",
+            "title2":"Satisfaire les besohs des utilisateurs au regard de la chaine de valeur du client. organiser et piloter un projet informatique avec des méthodes classiques ou agiles.","text":"Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et dse utilisateurs.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=5&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},
+            {
+                "title1":"Collaborer au sein d'une équipe informatique",
+            "title2":"Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.","text":"Situer son rôle et ses missions au sein d'uneéquipe informatique.","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=6&s=4", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}}
         ],
         [
             {"title1":"","title2":"","text":"","links":[{"route":"./?page=skills&section=but&subsection=competence&competence=1&s=5", "text":"Plus de détails sur cette compétence >>"}],"children":{"title":"","text":""}},

@@ -1,0 +1,22 @@
+#root{
+    padding: 0;
+    margin: 0;
+    height: 100vh!important;
+    display: grid;
+    width: 100vw;
+    overflow: hidden;
+}
+#skillsRoot{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;    
+    place-items: center;
+    top: 0;
+}
+
+#skillsRoot > .section, #skillsRoot >  .growingSection{
+    width: 50%;
+}
+#skillsRoot > .section , #skillsRoot > .growingSection{
+    width: 50%;
+}

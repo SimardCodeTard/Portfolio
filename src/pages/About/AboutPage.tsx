@@ -1,9 +1,9 @@
 import BackButton from "../../components/BackButton/BackButton";
-import Section from "../../components/Section";
-import '../Home/HomePage.css'
+import Section from "../../components/Section/Section";
+import styles from './AboutPage.module.css';
 export default function AboutPage(){
     return (
-        <main id='aboutRoot'>
+        <main id={styles.aboutRoot}>
             <Section title1='Mes passions' title2="Parlons de ce que j'aime" text="Sciences, histoire et bien sûr, informatique "
             links={[
                 {route:'../?page=passions',text:'Allons y >>'}

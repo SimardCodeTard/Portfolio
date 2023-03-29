@@ -4,7 +4,7 @@ import GoalsPage from './pages/Goals/GoalsPage';
 import { HomePage } from './pages/Home/HomePage';
 import PassionsPage from './pages/Passions/PassionsPage';
 import ProjectsPage from './pages/Projects/PojectsPage';
-import SkillsButPage from './pages/Skills/SkillsBut/SkillsButPage';
+import ButSkillsPage from './pages/Skills/SkillsBut/ButSkillsPage';
 import SkillsPage from './pages/Skills/SkillsPage';
 import SkillsPersoPage from './pages/Skills/SkillsPerso/SkillsPersoPage';
 
@@ -16,7 +16,7 @@ function App() {
   if (page === "about"){
     return (<AboutPage></AboutPage>);
   }else if (page === "skills"){
-    if(section === "but") return(<SkillsButPage></SkillsButPage>)
+    if(section === "but") return(<ButSkillsPage></ButSkillsPage>)
     else if (section === "perso") return(<SkillsPersoPage></SkillsPersoPage>)
     return(<SkillsPage></SkillsPage>)
   }else if (page === 'passions'){
