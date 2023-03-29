@@ -1,8 +1,9 @@
-import BackButton from "../../../components/BackButton/BackButton";
+import { faArrowLeft, faHome } from "@fortawesome/free-solid-svg-icons";
+import NavButton from "../../../components/BackButton/NavButton";
 
 export default function SkillsPersoPage(){
     return(<main id="persoSkillsPage">
         SkillsPersoPage works !
-        <BackButton href="./?page=skills"></BackButton>
+        <NavButton iconsHref={[{icon:faArrowLeft,href:'./'},{icon:faHome,href:'./'}]}></NavButton>
     </main>)
 }
