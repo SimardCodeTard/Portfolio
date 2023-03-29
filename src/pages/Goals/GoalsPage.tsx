@@ -1,4 +1,4 @@
-import BackButton from "../../components/BackButton/BackButton";
+import BackButton from "../../components/BackButton/NavButton";
 
 export default function GoalsPage(){
     return (

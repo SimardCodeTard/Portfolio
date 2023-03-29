@@ -1,5 +1,6 @@
+import { faArrowLeft, faHome } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
-import BackButton from "../../components/BackButton/BackButton";
+import NavButton from "../../components/BackButton/NavButton";
 import Section from "../../components/Section/Section";
 import styles from  './ProjectsPage.module.css'
 export default function ProjectsPage(){
@@ -24,7 +25,7 @@ export default function ProjectsPage(){
             <Section id="loneSection" title1="Ce portfolio" title2="Une application web développée avec React" links={[
                 {route:'https://github.com/Gerard2par2/Portfolio',text:"Source >>"} 
             ]} contentChildrenNodes = {[<ProjectImage state = {portfolioVisible} fileName="projet-portfolio"></ProjectImage>]} ></Section>
-            <BackButton href='./'></BackButton>
+            <NavButton iconsHref={[{icon:faArrowLeft,href:'./'},{icon:faHome,href:'./'}]}></NavButton>
         </main>
     )
 }

@@ -1,4 +1,4 @@
-import BackButton from "../../components/BackButton/BackButton";
+import BackButton from "../../components/BackButton/NavButton";
 import Section from "../../components/Section/Section";
 import styles from './PassionPage.module.css'
 

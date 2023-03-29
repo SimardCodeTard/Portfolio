@@ -1,6 +1,8 @@
-import BackButton from "../../components/BackButton/BackButton";
+import NavButton from "../../components/BackButton/NavButton";
+import BackButton from "../../components/BackButton/NavButton";
 import Section from "../../components/Section/Section";
 import styles from './AboutPage.module.css';
+import { faArrowLeft, faHome } from "@fortawesome/free-solid-svg-icons";
 export default function AboutPage(){
     return (
         <main id={styles.aboutRoot}>
@@ -19,7 +21,7 @@ export default function AboutPage(){
                 {route:'../?page=goals',text:'Par ici >>'}
             ]}
             ></Section>
-            <BackButton href='./'></BackButton>
+            <NavButton iconsHref={[{icon:faArrowLeft,href:'./'},{icon:faHome,href:'./'}]}></NavButton>
         </main>
     )
 }

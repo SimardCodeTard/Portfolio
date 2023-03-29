@@ -1,9 +1,9 @@
 import styles from './Competence.module.css';
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import Section from "../../../../components/Section/Section";
-import BackButton from '../../../../components/BackButton/BackButton';
+import NavButton from '../../../../components/BackButton/NavButton';
 
 export default function Competence(props:{comp:string,semester:string}){
     const compData = require('../Semester/compData.json')
@@ -57,6 +57,6 @@ export default function Competence(props:{comp:string,semester:string}){
                 </div>
             </div>
             <Section title1={dataRow.title1} title2={dataRow.title2} text={dataRow.text} isGrowing={false} childrenNodes={[children]}></Section>
-            <BackButton href='./?page=skills&section=but'></BackButton>
+            <NavButton iconsHref={[{icon:faArrowLeft,href:'./'},{icon:faHome,href:'./'}]}></NavButton>
         </main>)
 }

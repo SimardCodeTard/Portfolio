@@ -1,7 +1,8 @@
 import styles from  './ButSkillsPage.module.css'
 import Semester from "./Semester/Semester";
 import Competence from './Competence/Competence';
-import BackButton from '../../../components/BackButton/BackButton';
+import { faArrowLeft, faHome } from '@fortawesome/free-solid-svg-icons';
+import NavButton from '../../../components/BackButton/NavButton';
 
 export default function ButSkillsPage(){
     const queryParameters = new URLSearchParams(window.location.search)
@@ -14,7 +15,7 @@ export default function ButSkillsPage(){
             {!subsection 
             ?<Semester semester={1}></Semester>
             :<Competence semester={s} comp={compentence}></Competence>}
-            <BackButton href='./?page=skills'></BackButton>
+            <NavButton iconsHref={[{icon:faArrowLeft,href:'./'},{icon:faHome,href:'./'}]}></NavButton>
         </main>
     )
 }
