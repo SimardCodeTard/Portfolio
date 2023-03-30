@@ -15,7 +15,7 @@ export default function ButSkillsPage(){
             {!subsection 
             ?<Semester semester={1}></Semester>
             :<Competence semester={s} comp={compentence}></Competence>}
-            <NavButton iconsHref={[{icon:faArrowLeft,href:'./'},{icon:faHome,href:'./'}]}></NavButton>
+            <NavButton iconsHref={[{icon:faArrowLeft,href:'./?page=about'},{icon:faHome,href:'./'}]}></NavButton>
         </main>
     )
 }

@@ -57,6 +57,6 @@ export default function Competence(props:{comp:string,semester:string}){
                 </div>
             </div>
             <Section title1={dataRow.title1} title2={dataRow.title2} text={dataRow.text} isGrowing={false} childrenNodes={[children]}></Section>
-            <NavButton iconsHref={[{icon:faArrowLeft,href:'./'},{icon:faHome,href:'./'}]}></NavButton>
+            <NavButton iconsHref={[{icon:faArrowLeft,href:'./?page=skills&section=but'},{icon:faHome,href:'./'}]}></NavButton>
         </main>)
 }

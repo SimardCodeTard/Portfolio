@@ -1,11 +1,9 @@
 #semesterRoot{
-    display: grid;
-    grid-template-rows: 1fr 5fr;
-    place-items: center;
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
-    width: 100vw;
-    /* overflow-x: hidden; */
+    height: fit-content;
 }
 #semesterRow>h1{
     margin-top: 1em;

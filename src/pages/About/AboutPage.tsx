@@ -13,7 +13,9 @@ export default function AboutPage(){
             ></Section>
             <Section title1='Mes compétences' title2='Découvrez ce que je sais faire' text='Java, React, SQL et bien plus encore...'
             links={[
-                {route:'../?page=skills',text:'Voyons ça >>'}
+                {route:'../?page=skills&section=but',text:'Mes compétences scolaires >>', description:'Une liste des compétences prodiguées par ma formation'},
+                {route:'../?page=skills&section=perso',text:'Mes compétences personnelles >>', description:'Les compétences que j\'ai acquérit par moi même'}
+
             ]}
             ></Section>
             <Section title1='Mes objectifs' title2='Mes ambitions et mes rêves' text="Web, jeux vidéos et IA"

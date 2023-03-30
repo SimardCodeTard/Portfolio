@@ -1,0 +1,14 @@
+.navButton{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+}
+.navButton > * {
+    margin: 0.5em;
+}

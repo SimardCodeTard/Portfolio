@@ -11,7 +11,7 @@ export default  function SkillsPage(){
             <Section className='skillsPageSection' title1="Personnelles" title2="Mes compétences personnelles" text="Les compétences que j'ai acquérit par moi même" links={[
                 {route:'./?page=skills&section=perso', text:"Juste là >>"}
             ]}></Section>
-            <NavButton iconsHref={[{icon:faArrowLeft,href:'./'},{icon:faHome,href:'./'}]}></NavButton>
+            <NavButton iconsHref={[{icon:faArrowLeft,href:'./?page=about'},{icon:faHome,href:'./'}]}></NavButton>
         </main>
     )
 }

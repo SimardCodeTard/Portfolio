@@ -1,11 +1,3 @@
-#root{
-    padding: 0;
-    margin: 0;
-    height: 100vh!important;
-    display: grid;
-    width: 100vw;
-    overflow: hidden;
-}
 #skillsRoot{
     display: grid;
     grid-template-columns: 1fr;

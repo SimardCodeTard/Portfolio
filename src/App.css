@@ -11,28 +11,38 @@
 *{
     outline: solid 1px green;
 } */
-body{
-    height:100vh;
-    width:100vw;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+body{    
     padding:0px;
     margin:0px; 
-    /* overflow: hidden; */
     margin: 0px;
     padding:0px;
     color: white;
-    font-family: 'roboto mono','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: grid;
+    font-family: 'roboto mono','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
     justify-content: center;
     place-items: center;
     background: linear-gradient(-45deg,var(--warm-primary),var(--warm-secondary),var(--warm-tertiary),var(--warm-quaternary),var(--warm-quinary), var(--warm-senary));
     color-interpolation-filters: sRGB;
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+    display: flex;
+    flex-direction: column;
 }
-main, #root{
+main{
     padding: 0;
     margin: 0;
-    width: 100vw!important;
-    height: 100vh!important;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 

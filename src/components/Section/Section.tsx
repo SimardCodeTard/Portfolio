@@ -9,6 +9,7 @@ type Link={
     route:string,
     id?:string,
     text?:string,
+    description?:string,
     icon?:IconProp,
     iconSize?:SizeProp,
     iconId?:string,
@@ -37,25 +38,25 @@ export default function Section({className,id,links,text,title1,title2,childrenN
           <div className = {styles.content}>
               { title2 ? <h2>{title2}</h2> : null }
               {  text ? <p>{text}</p> : null }
-              { links ? 
-              <div id={styles.linksDiv}>
-                {links.map((link:Link,key:number)=>{
-                  return(
-                  <>
-                  <a className={styles.classLink}  id={ link.id ?styles[link.id] : undefined} key={key} href={link.route} onMouseOver = {link?.onMouseHoverEvent} onClick = {link?.onClickEvent}>
-                    {link.icon ? 
-                      <FontAwesomeIcon  id={ link.iconId ? styles[link.iconId] : undefined}icon={link.icon} size={link.iconSize ? link.iconSize : undefined} />
+              { links 
+                ? <div id={styles.linksDiv}>
+                  {links.map((link:Link,key:number)=>{
+                    return(
+                      <a key={key} className={styles.classLink}  id={ link.id ? styles[link.id] : undefined} href={link.route} onMouseOver = {link?.onMouseHoverEvent} onClick = {link?.onClickEvent}>
+                        {link.icon ? 
+                          <FontAwesomeIcon  id={ link.iconId ? styles[link.iconId] : undefined}icon={link.icon} size={link.iconSize ? link.iconSize : undefined} />
+                        :null}
+                        {link.text}
+                        {link.description ? <p className={styles.linkDescription}>{link.description}</p> : null}
+                      </a>
+                    )
+                  })}
+                  { contentChildrenNodes 
+                    ? contentChildrenNodes.map((contentChildrenNode:ReactNode,contentChildrenKey:number)=>{
+                      return <div key={contentChildrenKey}>{contentChildrenNode}</div>;
+                    })
                     :null}
-                    {link.text}
-                  </a>
-                  </> )
-                })}
-                { contentChildrenNodes 
-                ? contentChildrenNodes.map((contentChildrenNode:ReactNode,contentChildrenKey:number)=>{
-                  return <div key={contentChildrenKey}>{contentChildrenNode}</div>;
-                })
-                :null}
-              </div>
+                </div>
               : null}
           </div>
         : null}

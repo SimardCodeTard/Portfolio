@@ -6,9 +6,7 @@ const copyPopup = forwardRef((props, ref)=>{
     const [popupVisible,setPopupVisible] = useState(false);
 
     useImperativeHandle(ref,()=>({
-        async displayPopup(e:Event){
-            console.log('display popup called');
-            
+        async displayPopup(_:Event){
             setPopupVisible(true);
             await (new Promise(resolve=>setTimeout(resolve,2500)));
             setPopupVisible(false);
