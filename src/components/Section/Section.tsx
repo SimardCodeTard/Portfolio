@@ -1,70 +1,92 @@
-import { IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { MouseEventHandler, ReactNode} from 'react'
+import { IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { MouseEventHandler, ReactNode } from 'react';
 import styles from './Section.module.css';
+
 type Link={
-    // this type is used fot the links <a> passed as props
-    // It includes a route, a html id, a text <p>, a font awesome icon, a font awesome icon size and 
-    // a MouseEventHandler for the onClick listener
-    route:string,
-    id?:string,
-    text?:string,
-    description?:string,
-    icon?:IconProp,
-    iconSize?:SizeProp,
-    iconId?:string,
-    class?:string,
-    onClickEvent?:MouseEventHandler<HTMLAnchorElement>
-    onMouseHoverEvent?:MouseEventHandler<HTMLAnchorElement>
+  // this type is used fot the links <a> passed as props
+  // It includes a route, a html id, a text <p>, a font awesome icon, a font awesome icon size and 
+  // a MouseEventHandler for the onClick listener
+  route:string,
+  id?:string,
+  text?:string,
+  description?:string,
+  icon?:IconProp,
+  iconSize?:SizeProp,
+  iconId?:string,
+  classNames?:string[],
+  onClickEvent?:MouseEventHandler<HTMLAnchorElement>
+  onMouseHoverEvent?:any,
+  onMouseEnter?:any,
+  onMouseLeave?:any
 }
 type Props = {
-  // Typed used for the props of this component, it includes an html id, <h1> title, <h2> title, <p> text,
-  // an array of links <a> and functions to run  
-  className?:any
-  id?:string
-  title1?:string
-  title2?:string
-  text?:string 
-  links?:Array<Link>,
-  contentChildrenNodes?:Array<ReactNode>,
-  childrenNodes?:Array<ReactNode>,
-  isGrowing?:boolean
+// Typed used for the props of this component, it includes an html id, <h1> title, <h2> title, <p> text,
+// an array of links <a> and functions to run  
+className?:any
+linksDivClasses?:string[],
+id?:string
+title1?:string
+title2?:string
+text?:string 
+links?:Array<Link>,
+contentChildrenNodes?:Array<ReactNode>,
+childrenNodes?:Array<ReactNode>,
+isGrowing?:boolean
 }
-export default function Section({className,id,links,text,title1,title2,childrenNodes,contentChildrenNodes,isGrowing=true}:Props){
-  return(
-    <div className={`${className ? styles[className] : undefined} ${isGrowing ? styles.growingSection : styles.section}`} id={id? styles[id] : undefined}>
+export default function Section({
+  className,
+  linksDivClasses,
+  id,
+  links,
+  text,
+  title1,
+  title2,
+  childrenNodes,
+  contentChildrenNodes,
+  isGrowing = true,
+}: Props) {
+
+  const getClassNameString = (classNames: string[] | undefined): string => {
+    if (!classNames) return '';
+    return classNames.map((className) => styles[className] ?? '').join(' ');
+  };
+
+  return (
+    <div className={`${className ? styles[className] : undefined} ${isGrowing ? styles.growingSection : styles.section}`} id={id ? styles[id] : undefined}>
         { title1 ? <h1 className='sectionTitle'>{ title1 }</h1> : null }
         { title2 ||  text || links ? 
-          <div className = {styles.content}>
+          <div className={styles.content}>
               { title2 ? <h2>{title2}</h2> : null }
               {  text ? <p>{text}</p> : null }
               { links 
-                ? <div id={styles.linksDiv}>
-                  {links.map((link:Link,key:number)=>{
+                ? <div className={`${styles.linksDiv} ${getClassNameString(linksDivClasses)}`}>
+                  {links.map((link: Link, index: number) => {
                     return(
-                      <a key={key} className={styles.classLink}  id={ link.id ? styles[link.id] : undefined} href={link.route} onMouseOver = {link?.onMouseHoverEvent} onClick = {link?.onClickEvent}>
+                      <a key={index} className={getClassNameString(link.classNames)} id={link.id ? styles[link.id] : undefined} href={link.route} 
+                      onMouseOver={link?.onMouseHoverEvent} onMouseEnter={link?.onMouseEnter} onMouseLeave={link?.onMouseLeave} onClick={link?.onClickEvent}>
                         {link.icon ? 
-                          <FontAwesomeIcon  id={ link.iconId ? styles[link.iconId] : undefined}icon={link.icon} size={link.iconSize ? link.iconSize : undefined} />
-                        :null}
+                          <FontAwesomeIcon id={link.iconId ? styles[link.iconId] : undefined} icon={link.icon} size={link.iconSize ? link.iconSize : undefined} />
+                        : null}
                         {link.text}
                         {link.description ? <p className={styles.linkDescription}>{link.description}</p> : null}
                       </a>
                     )
                   })}
                   { contentChildrenNodes 
-                    ? contentChildrenNodes.map((contentChildrenNode:ReactNode,contentChildrenKey:number)=>{
+                    ? contentChildrenNodes.map((contentChildrenNode: ReactNode, contentChildrenKey: number) => {
                       return <div key={contentChildrenKey}>{contentChildrenNode}</div>;
                     })
-                    :null}
+                    : null}
                 </div>
               : null}
           </div>
         : null}
         { childrenNodes 
-          ? childrenNodes.map((childrenNode:ReactNode,childrenKey:number)=>{
+          ? childrenNodes.map((childrenNode: ReactNode, childrenKey: number) => {
             return <div key={childrenKey}>{childrenNode}</div>;
           })
-          :null}
+          : null}
     </div>
   );
 }

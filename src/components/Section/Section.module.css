@@ -17,6 +17,10 @@
     backdrop-filter: blur(5px);
     box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.8);
     transition: all 1s ease;
+    z-index: 1;
+}
+.sectionTitle{
+    margin: 0;
 }
 .skillsPageSection{
     width: 50%;
@@ -51,9 +55,9 @@
 .content *{
     margin:0;
 }
-.section, .growingSection > h1{
+/* .section, .growingSection > h1{
     margin: 5px;
-}
+} */
 #linksDiv{
     display: flex;
     flex-direction: column;
@@ -103,4 +107,27 @@ h2{
 .linkDescription{
     color: rgba(255,255,255,0.5);
     font-size: 0.8em;
+}
+
+.gitLinksDiv{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+.homeGitLink{
+    grid-row: 1;
+    /* padding: 0.8em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homeGitLink > * {
+    margin: 0.3em;
+}
+.gitLinksDiv > a:not(.homeGitLink){
+    grid-row: 2;
+}
+.contactLinksDiv{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
