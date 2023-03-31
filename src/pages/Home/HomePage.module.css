@@ -4,3 +4,6 @@
     grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 20fr 1fr;
 }
+.gitLinksDiv{
+    background-color: red;
+}

@@ -19,18 +19,18 @@ export function HomePage(){
     }
     return (
         <main id={styles.homeRoot}>
-            <Section className="homeSection" id="git" title1='Découvrez mes projets' links ={[
-                {route:'https://forge.univ-lyon1.fr/p2102858',text:'GitLab',icon:faGitlab,iconSize:'2x' as SizeProp},
-                {route:'https://github.com/Gerard2par2',text:'GitHub',icon:faGithub,iconSize:'2x' as SizeProp},
-                {route:'./?page=projects',text:"Quelques projets >>", class:"centeredLink"}
+            <Section className="homeSection" linksDivClasses = {["gitLinksDiv"]} id="git" title1='Découvrez mes projets' links ={[
+                {route:'https://forge.univ-lyon1.fr/p2102858',text:'GitLab',icon:faGitlab, classNames:['homeGitLink'], iconSize:'2x' as SizeProp},
+                {route:'https://github.com/Gerard2par2',text:'GitHub',icon:faGithub, classNames:['homeGitLink'], iconSize:'2x' as SizeProp},
+                {route:'./?page=projects',text:"Quelques projets >>", classNames:["centeredLink"]}
             ]}
             ></Section>
 
             <Section className="homeSection" id='about' title1 ='Simon Menard' title2 = 'Etudiant en informatique' links={[
-                {route:'./?page=about',text:"Plus d'informations >>", class:"centeredLink"}]}
+                {route:'./?page=about',text:"Plus d'informations >>", classNames:["centeredLink"]}]}
             ></Section>
 
-            <Section className="homeSection" id='contact' title1="Contact" links={[
+            <Section className="homeSection" linksDivClasses = {["contactLinksDiv"]} id='contact' title1="Contact" links={[
                 {id:'mail',route:'./',text:'simon.menardp03@gmail.com',icon:faEnvelope ,onClickEvent:contactMailClick as any},
                 {id:'discord', route:'https://discordapp.com/users/1069754391374082139',text:'Slimar#9537', icon:faDiscord}
             ]}
