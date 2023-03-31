@@ -12,12 +12,6 @@ export default function ProjectsPage(){
     const [mathSlaveVisible, setMathSlaveVisible] = useState(false);
     const [notesAppVisible, setNotesAppVisible] = useState(false);
 
-    // interface LinkRefType{displayImage():void};
-    // const cProjectRef = useRef<LinkRefType>();
-    // const gramaProjectRef = useRef<LinkRefType>();
-    // const planetEpsortProjectRef = useRef<LinkRefType>();
-    // const portfolioProjectRef = useRef<LinkRefType>();
-    // const notesAppProjectRef = useRef<LinkRefType>();
     type Props={
         fileName?:string,
         state?:boolean,
@@ -29,7 +23,6 @@ export default function ProjectsPage(){
             <img className={state ? styles.projectImage : styles.hidden}src={`/assets/images/${fileName}.png`}></img>
         )
     }
-
     const getClassNameString = (classNames: string[] | undefined): string => {
         if (!classNames) return '';
         return classNames.map((className) => styles[className] ?? '').join(' ');
