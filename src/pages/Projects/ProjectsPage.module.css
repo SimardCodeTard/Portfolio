@@ -10,7 +10,16 @@
 .projectImage{
     position: absolute;
     width: auto;
-    height: 10em;
+    height: 20em;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: solid rgba(255,255,255,0.2) 1px;
+    border-radius: 0.5em;
+    top: 50%;
+    left: 50%;
 }
 .hidden{
     display: none;
