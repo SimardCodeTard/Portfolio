@@ -3,6 +3,10 @@
     place-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    overflow: visible;
+    height: fit-content;
+    bottom: 0;
+    padding-top: 3em;
 }
 #projectsPageRoot > .section{
     width: 1em;

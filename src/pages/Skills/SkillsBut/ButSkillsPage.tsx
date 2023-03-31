@@ -1,6 +1,6 @@
 import styles from  './ButSkillsPage.module.css'
 import Semester from "./Semester/Semester";
-import Competence from './Competence/Competence';
+import Competence from './Competence/CompetencePage';
 import { faArrowLeft, faHome } from '@fortawesome/free-solid-svg-icons';
 import NavButton from '../../../components/BackButton/NavButton';
 

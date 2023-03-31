@@ -51,7 +51,7 @@ export default function Section({
     if (!classNames) return '';
     return classNames.map((className) => styles[className] ?? '').join(' ');
   };
-
+  
   return (
     <div className={`${className ? styles[className] : undefined} ${isGrowing ? styles.growingSection : styles.section}`} id={id ? styles[id] : undefined}>
         { title1 ? <h1 className='sectionTitle'>{ title1 }</h1> : null }
@@ -73,13 +73,14 @@ export default function Section({
                       </a>
                     )
                   })}
-                  { contentChildrenNodes 
-                    ? contentChildrenNodes.map((contentChildrenNode: ReactNode, contentChildrenKey: number) => {
-                      return <div key={contentChildrenKey}>{contentChildrenNode}</div>;
-                    })
-                    : null}
                 </div>
               : null}
+              { contentChildrenNodes 
+                ? contentChildrenNodes.map((contentChildrenNode: ReactNode, contentChildrenKey: number) => {
+                    console.log('oui !!');
+                    return <div key={contentChildrenKey}>{contentChildrenNode}</div>;
+                })
+                : null}
           </div>
         : null}
         { childrenNodes 

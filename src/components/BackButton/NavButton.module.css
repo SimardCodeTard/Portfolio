@@ -8,6 +8,7 @@
     justify-content: center;
     width: fit-content;
     height: fit-content;
+    z-index: 100;
 }
 .navButton > * {
     margin: 0.5em;

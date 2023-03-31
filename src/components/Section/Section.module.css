@@ -23,7 +23,8 @@
     margin: 0;
 }
 .skillsPageSection{
-    width: 50%;
+    width: 100%;
+    height: 100%;
 }
 .butSkillsPageSection{
     width: 65% ;
@@ -55,9 +56,6 @@
 .content *{
     margin:0;
 }
-/* .section, .growingSection > h1{
-    margin: 5px;
-} */
 #linksDiv{
     display: flex;
     flex-direction: column;
@@ -104,6 +102,9 @@ h2{
 .homeSection{
 	grid-row: 2;
 }
+.homeSection > h1 {
+    font-size: 1.8em;
+}
 .linkDescription{
     color: rgba(255,255,255,0.5);
     font-size: 0.8em;
@@ -130,4 +131,11 @@ h2{
 .contactLinksDiv{
     display: grid;
     grid-template-rows: 1fr 1fr;
+}
+.centeredLinksDiv{
+    place-items: center;
+    width: 100%;
+}
+.centeredLinksDiv > a {
+    margin: 0.2em;
 }
