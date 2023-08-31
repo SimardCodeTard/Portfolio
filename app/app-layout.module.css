@@ -1,0 +1,33 @@
+.root {
+    position: relative;
+    width: 100vw;
+    background-color: transparent;
+    height: fit-content;
+}
+
+.background_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(
+        77% 160% at 50% 80%, 
+        #000313 0%,
+         #00011D 25%,
+          #120333 40%,
+           #1d014b 47.5%,
+            #160033 49.70%,
+             #000 49.75%,
+              #190628 50%,
+               rgba(0, 0, 0, 0.73) 74.78%,
+                rgba(0, 0, 0, 0.5) 100%),
+                url("../public/images/SMACS-0723.jpg");
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    /* Add your content styles here */
+}

@@ -1,0 +1,14 @@
+.card {
+    background-color: transparent;
+    background: linear-gradient(90deg, rgba(73, 109, 126, 0.6) 0%, rgba(68, 82, 122, 0.6) 100%);
+    border: solid 1px rgba(255,255,255,0.2);
+    transition: all ease 0.2s;
+    box-shadow: 2px 0px 15px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {    
+    background: linear-gradient(90deg, rgba(73, 109, 126, 0.7) 0%, rgba(68, 82, 122, 0.7) 100%);
+    scale: 1.05;
+    transition: all ease 0.5s;
+    /* box-shadow: inset 0px 0px 15px 2px rgba(0, 0, 0, 0.5); */
+}

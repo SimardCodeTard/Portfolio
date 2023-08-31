@@ -1,0 +1,19 @@
+.gradient_title {
+    padding: 0.3rem;
+    background: -webkit-linear-gradient(45deg, rgba(49, 125, 160, 0.9), rgba(114, 60, 202, 0.9), rgba(185, 30, 216, 0.9));
+    background-clip: text;
+    color: transparent;
+    font-size: 3em;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.5);
+}
+
+.scrolling_background {
+    background-size: 400%, 400%;
+    animation: scrollingBackground 5s ease infinite;
+}
+
+@keyframes scrollingBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
