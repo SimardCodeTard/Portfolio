@@ -2,9 +2,6 @@ import homeStyles from './home.module.css'
 import Card from './components/card/card'
 import Link from 'next/link'
 
-import homeStyles from './home.module.css'
-import Link from 'next/link'
-
 export default function Home() {
   return (
     <div className={"flex h-screen w-screen items-center font-mono " + homeStyles.main} >
