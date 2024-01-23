@@ -1,13 +1,13 @@
 'use client';
-import { assert } from 'console';
 import { useEffect, useRef, useCallback, useState } from 'react';
 
 // Constants for cell states
+const DEBUG = 2;
 const ALIVE = 1;
 const DEAD = 0;
 
 // Configuration constants
-const CELL_SIZE = 6; // Size of each cell in pixels
+const CELL_SIZE = 10; // Size of each cell in pixels
 const UPDATE_INTERVAL = 1000 / 60; // Animation speed (frames per second)
 
 export default function GameOfLife() {
@@ -18,7 +18,7 @@ export default function GameOfLife() {
 
     // Function to draw a single cell
     const drawCell = useCallback((x: number, y: number, cell: number, context: CanvasRenderingContext2D) => {
-        context.fillStyle = cell === ALIVE ? 'white' : 'black';
+        context.fillStyle = cell === ALIVE ? 'white' : cell === DEBUG ? 'red' : 'black';
         // Adjust position and size based on CELL_SIZE
         context.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
 
@@ -48,13 +48,13 @@ export default function GameOfLife() {
         const canvas = canvasRef.current;
         if (!canvas) return;
 
-        // Calculate grid size based on canvas size and CELL_SIZE
+        // Calculate grid size based on canvas size and CELL_SIZEn
         const width = Math.floor(canvas.width / CELL_SIZE);
         const height = Math.floor(canvas.height / CELL_SIZE);
 
         // Create a new grid with random alive and dead cells
         const newGrid = Array.from({ length: width }, () =>
-            Array.from({ length: height }, () => Math.random() > 0.8 ? ALIVE : DEAD)
+            Array.from({ length: height }, () => Math.random() > 0.9 ? ALIVE : DEAD)
         );
 
         cellsGridRef.current = newGrid;
@@ -96,15 +96,18 @@ export default function GameOfLife() {
         cellsToAddRef.current = [];
     }, [getNeighbourCount, drawCell]);
 
-    const placeRandomCells = (radius: number, prob: number, x:number, y: number, width: number, height: number, context: CanvasRenderingContext2D) => {
-        const newCellX = Math.floor(Math.random() * width / CELL_SIZE);
-        const newCellY = Math.floor(Math.random() * height / CELL_SIZE);
-
+    const placeRandomCells = (radius: number, prob: number, x:number, y: number) => {
         for(let dx = -radius; dx <= radius; dx++) {
             for(let dy = -radius; dy <= radius; dy++) {
-                if (!cellsGridRef.current[newCellX + dx] || !cellsGridRef.current[newCellX + dx][newCellY + dy]) continue;
-                if (cellsGridRef.current[newCellX + dx][newCellY + dy] === ALIVE && Math.random() > prob) {
-                    cellsToAddRef.current.push({x: newCellX + dx, y: newCellY + dy, newValue: ALIVE});
+                const cellX = Math.round((x + dx) / CELL_SIZE);
+                const cellY = Math.round((y + dy) / CELL_SIZE);
+                if(cellX > cellsGridRef.current.length || cellY > cellsGridRef.current[cellX].length) {
+                    continue;
+                }
+                const cellIsDead = cellsGridRef.current[cellX][cellY] === DEAD;
+                const randomRollSuccess =  Math.random() < prob;
+                if (cellIsDead && randomRollSuccess) {
+                    cellsToAddRef.current.push({x: cellX, y: cellY, newValue: ALIVE});
                 }
             }
         }
@@ -112,16 +115,12 @@ export default function GameOfLife() {
 
     // Create cells on mouse move
     const onMouseMove = (event: MouseEvent) => {
-        const canvas = canvasRef.current as HTMLCanvasElement;
-        const context = canvas.getContext('2d') as CanvasRenderingContext2D;
-        placeRandomCells(3, 0.7, event.clientX, event.clientY, canvas.width, canvas.height, context);
+        placeRandomCells(3, 0.5, event.clientX, event.clientY);
     }
 
     // Create cells on mouse click
     const onMouseClick = (event: MouseEvent) => {
-        const canvas = canvasRef.current as HTMLCanvasElement;
-        const context = canvas.getContext('2d') as CanvasRenderingContext2D;
-        placeRandomCells(5, 0.8, event.pageX, event.pageY, canvas.width, canvas.height, context);
+        placeRandomCells(5, 0.8, event.pageX, event.pageY);
     }
 
     // Effect to initialize and run the game
