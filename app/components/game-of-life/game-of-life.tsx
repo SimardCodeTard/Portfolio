@@ -122,6 +122,11 @@ export default function GameOfLife() {
         placeRandomCells(5, 0.8, event.pageX, event.pageY);
     }
 
+    const onTouchMove = (event: TouchEvent) => {
+        const touch = event.touches[0];
+        placeRandomCells(3, 0.5, touch.clientX, touch.clientY);
+    }
+
     // Effect to initialize and run the game
     useEffect(() => {
         initCellsGrid();
@@ -146,14 +151,16 @@ export default function GameOfLife() {
         };
         window.addEventListener('resize', handleResize);
         window.addEventListener('mousemove', onMouseMove);
+        window.addEventListener('touchmove', onTouchMove)
         window.addEventListener('click', onMouseClick);
 
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('mousemove', onMouseMove);
+            window.removeEventListener('touchmove', onTouchMove);
             window.removeEventListener('click', onMouseClick);
         }
-    }, [initCellsGrid]);
+    }, [initCellsGrid, onMouseMove, onMouseClick]);
 
     // Effect to init window dimensions
     useEffect(() => {
