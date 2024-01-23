@@ -1,4 +1,5 @@
 'use client';
+import { init } from 'next/dist/compiled/webpack/webpack';
 import { useEffect, useRef, useCallback, useState } from 'react';
 
 // Constants for cell states
@@ -14,6 +15,10 @@ export default function GameOfLife() {
     const cellsGridRef = useRef<number[][]>([]);
     const cellsToAddRef = useRef<{x: number, y: number, newValue: number}[]>([]);
     const [windowInnerDimensions, setWindowInnerDimensions] = useState<{width: number, height: number}>({width: 0, height: 0});
+
+    const initCanvas = useCallback((context: CanvasRenderingContext2D) => {
+            context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+    }, []);
 
     // Function to draw a single cell
     const drawCell = useCallback((x: number, y: number, cell: number, context: CanvasRenderingContext2D) => {
@@ -129,6 +134,7 @@ export default function GameOfLife() {
 
     // Effect to initialize and run the game
     useEffect(() => {
+        initCanvas(canvasRef.current?.getContext('2d') as CanvasRenderingContext2D);
         initCellsGrid();
         const runAnimation = () => {
             run();

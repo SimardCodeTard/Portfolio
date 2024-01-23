@@ -35,6 +35,6 @@ body {
       var(--background-end) 
     )
     var(--background-start);
-  min-height: 100dvh;
+  min-height: 100svh;
   touch-action: pan-y;
 }
