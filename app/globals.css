@@ -36,4 +36,5 @@ body {
     )
     var(--background-start);
   min-height: 100dvh;
+  touch-action: pan-y;
 }

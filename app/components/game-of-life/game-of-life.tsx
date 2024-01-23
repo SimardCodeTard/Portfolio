@@ -160,7 +160,7 @@ export default function GameOfLife() {
             window.removeEventListener('touchmove', onTouchMove);
             window.removeEventListener('click', onMouseClick);
         }
-    }, [initCellsGrid, onMouseMove, onMouseClick]);
+    }, [initCellsGrid, onMouseMove, onMouseClick, onTouchMove]);
 
     // Effect to init window dimensions
     useEffect(() => {
