@@ -2,7 +2,6 @@
 import { useEffect, useRef, useCallback, useState } from 'react';
 
 // Constants for cell states
-const DEBUG = 2;
 const ALIVE = 1;
 const DEAD = 0;
 
@@ -18,7 +17,7 @@ export default function GameOfLife() {
 
     // Function to draw a single cell
     const drawCell = useCallback((x: number, y: number, cell: number, context: CanvasRenderingContext2D) => {
-        context.fillStyle = cell === ALIVE ? 'white' : cell === DEBUG ? 'red' : 'black';
+        context.fillStyle = cell === ALIVE ? 'white' : 'black';
         // Adjust position and size based on CELL_SIZE
         context.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
 
