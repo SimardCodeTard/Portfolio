@@ -105,7 +105,7 @@ export default function GameOfLife() {
             for(let dy = -radius; dy <= radius; dy++) {
                 const cellX = Math.round((x + dx) / CELL_SIZE);
                 const cellY = Math.round((y + dy) / CELL_SIZE);
-                if(cellX > cellsGridRef.current.length || cellY > cellsGridRef.current[cellX].length) {
+                if(cellsGridRef.current[cellX] === undefined || cellsGridRef.current[cellX][cellY] === undefined) {
                     continue;
                 }
                 const cellIsDead = cellsGridRef.current[cellX][cellY] === DEAD;
@@ -119,11 +119,13 @@ export default function GameOfLife() {
 
     // Create cells on mouse move
     const onMouseMove = (event: MouseEvent) => {
+        console.log('move')
         placeRandomCells(3, 0.5, event.clientX, event.clientY);
     }
 
     // Create cells on mouse click
     const onMouseClick = (event: MouseEvent) => {
+        console.log('click')
         placeRandomCells(5, 0.8, event.pageX, event.pageY);
     }
 

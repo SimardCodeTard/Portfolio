@@ -35,6 +35,20 @@ body {
       var(--background-end) 
     )
     var(--background-start);
-  min-height: 100svh;
+  height: 100lvh;
   touch-action: pan-y;
+}
+
+main {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.canvas-container {
+  z-index: -1;
+}
+
+canvas {
+  z-index: -1;
 }
