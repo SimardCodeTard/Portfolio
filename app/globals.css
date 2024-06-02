@@ -28,14 +28,15 @@ body.dark {
 
 body {
   color: var(--foreground);
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       65%,
       var(--background-end) 
     )
-    var(--background-start);
-  height: 100lvh;
+    var(--background-start); */
+  background-color: black;
+  min-height: 100lvh;
   touch-action: pan-y;
 }
 
@@ -51,4 +52,34 @@ main {
 
 canvas {
   z-index: -1;
+}
+
+.widget {
+  border: solid 1px rgba(255,255,255,.2);
+  background-color: rgb(30,30,30);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 100;
 }

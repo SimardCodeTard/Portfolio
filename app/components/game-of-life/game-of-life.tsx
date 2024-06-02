@@ -1,6 +1,8 @@
-'use client';
-import { init } from 'next/dist/compiled/webpack/webpack';
+'use client';;
 import { useEffect, useRef, useCallback, useState } from 'react';
+import { getMatrixForLetter } from './letter-matrixes';
+import { roundUpper } from '@/lib/math-utils';
+import { getWordMatrixArray, getWordMatrixesLines } from '@/lib/matrix-utils';
 
 // Constants for cell states
 const ALIVE = 1;
@@ -11,6 +13,8 @@ const CELL_SIZE = 10; // Size of each cell in pixels
 const UPDATE_INTERVAL = 1000 / 60; // Animation speed (frames per second)
 
 export default function GameOfLife() {
+    let doRun = false;
+
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const cellsGridRef = useRef<number[][]>([]);
     const cellsToAddRef = useRef<{x: number, y: number, newValue: number}[]>([]);
@@ -47,6 +51,67 @@ export default function GameOfLife() {
         return count;
     }, []);
 
+    const initCellsText = () => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        console.log(windowInnerDimensions)
+
+        const width = Math.floor(windowInnerDimensions.width / CELL_SIZE);
+        const height = Math.floor(windowInnerDimensions.height / CELL_SIZE);
+
+        const text = 'Simon Menard - My Portfolio';
+        const letterMatrixes: number[][][] = text.split('').map((letter) => getMatrixForLetter(letter)).filter(line => line !== undefined && line.length > 0);
+
+        // Make an array of words
+        const wordMatrixArray = getWordMatrixArray(letterMatrixes);        
+
+        // Create a wordLines array with each element having length <= width
+        const wordLines = getWordMatrixesLines(wordMatrixArray, width);
+        
+        // Merge the wordLines array into a lines array
+
+        
+        const lines: number[][] = [];
+
+        // for(let i = 0; i < textMatrixes[0].length; i++) {
+        //     for(let j = 0; j < textMatrixes.length; j++) {
+        //         if(!lines[i] && textMatrixes[j][i]) {
+        //             lines[i] = textMatrixes[j][i];
+        //         } else if (textMatrixes[j][i]) {
+        //             lines[i] = lines[i].concat(textMatrixes[j][i])
+        //         }
+        //     }
+        // }
+
+        const newGrid: number[][] = [];
+        // const lines = matrix.lines;
+
+        for(let x = 0; x < width; x++) {
+            for(let y = 0; y < height; y++) {
+                if(newGrid[x] === undefined) {
+                    newGrid[x] = [];
+                } if (y < lines.length && x < lines[y].length) {
+                    newGrid[x][y] = lines[y][x];
+                } else {
+                    newGrid[x][y] = DEAD;
+                } 
+            } 
+        }
+
+        cellsGridRef.current = newGrid;
+        const context = canvas.getContext('2d') as CanvasRenderingContext2D;
+
+        console.log(newGrid.filter(line => line.filter(cell => cell === ALIVE)))
+
+        newGrid.forEach((row, x) => {
+            row.forEach((cell, y) => {
+                drawCell(x, y, cell, context);
+            });
+        });
+
+    }
+
     // Function to initialize the grid with random cells
     const initCellsGrid = useCallback(() => {
         const canvas = canvasRef.current;
@@ -72,7 +137,11 @@ export default function GameOfLife() {
     }, [drawCell]);
 
     // Function to run the Game of Life rules
-    const run = useCallback(() => {
+    const run = () => {
+        if(!doRun) {
+            return;
+        }
+
         const canvas = canvasRef.current as HTMLCanvasElement;
         const context = canvas && canvas.getContext('2d') as CanvasRenderingContext2D;
         const cellsToEdit: {x: number, y: number, newValue: number}[] = cellsToAddRef.current; // Array to keep track of cells to update
@@ -98,7 +167,7 @@ export default function GameOfLife() {
 
         cellsGridRef.current = newGrid;
         cellsToAddRef.current = [];
-    }, [getNeighbourCount, drawCell]);
+    }
 
     const placeRandomCells = (radius: number, prob: number, x:number, y: number) => {
         for(let dx = -radius; dx <= radius; dx++) {
@@ -119,13 +188,12 @@ export default function GameOfLife() {
 
     // Create cells on mouse move
     const onMouseMove = (event: MouseEvent) => {
-        console.log('move')
+        // doRun = true;
         placeRandomCells(3, 0.5, event.clientX, event.clientY);
     }
 
     // Create cells on mouse click
     const onMouseClick = (event: MouseEvent) => {
-        console.log('click')
         placeRandomCells(5, 0.8, event.pageX, event.pageY);
     }
 
@@ -137,7 +205,8 @@ export default function GameOfLife() {
     // Effect to initialize and run the game
     useEffect(() => {
         initCanvas(canvasRef.current?.getContext('2d') as CanvasRenderingContext2D);
-        initCellsGrid();
+        initCellsText();
+        // initCellsGrid();
         const runAnimation = () => {
             run();
             setTimeout(() => requestAnimationFrame(runAnimation), UPDATE_INTERVAL);
@@ -154,9 +223,11 @@ export default function GameOfLife() {
                 setWindowInnerDimensions({width: window.innerWidth, height: window.innerHeight});
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
-                initCellsGrid(); // Re-initialize the grid on resize
+                // initCellsText();
+                // initCellsGrid(); // Re-initialize the grid on resize
             }
         };
+        
         window.addEventListener('resize', handleResize);
         window.addEventListener('mousemove', onMouseMove);
         window.addEventListener('touchmove', onTouchMove)
@@ -169,7 +240,7 @@ export default function GameOfLife() {
             window.removeEventListener('click', onMouseClick);
         }
     }, [initCellsGrid, onMouseMove, onMouseClick, onTouchMove]);
-
+// 
     // Effect to init window dimensions
     useEffect(() => {
         setWindowInnerDimensions({width: window.innerWidth, height: window.innerHeight});
